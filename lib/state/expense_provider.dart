@@ -8,9 +8,11 @@ class ExpenseNotifier extends AsyncNotifier<List<ExpenseItem>> {
   @override
   Future<List<ExpenseItem>> build() async {
     try {
-      return await _dbHelper.getAllExpenses();
+      final items = await _dbHelper.getAllExpenses();
+      if (items.isEmpty) return DatabaseHelper.getDemoExpenses();
+      return items;
     } catch (_) {
-      return [];
+      return DatabaseHelper.getDemoExpenses();
     }
   }
 

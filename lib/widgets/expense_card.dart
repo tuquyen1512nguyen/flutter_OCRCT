@@ -71,12 +71,15 @@ class ExpenseCard extends StatelessWidget {
                             color: color,
                           ),
                         ),
-                        const SizedBox(width: 8),
-                        Text(
-                          '•  ${AppConstants.formatDateShort(expense.timestamp)}',
-                          style: TextStyle(
-                            fontSize: 12,
-                            color: Theme.of(context).colorScheme.outline,
+                        const SizedBox(width: 6),
+                        Expanded(
+                          child: Text(
+                            '• ${AppConstants.formatDateShort(expense.timestamp)}',
+                            style: TextStyle(
+                              fontSize: 12,
+                              color: Theme.of(context).colorScheme.outline,
+                            ),
+                            overflow: TextOverflow.ellipsis,
                           ),
                         ),
                       ],

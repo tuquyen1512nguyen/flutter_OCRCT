@@ -76,7 +76,7 @@ class ExpenseManagerApp extends StatelessWidget {
         return LayoutBuilder(
           builder: (context, constraints) {
             // Khi xem trên màn hình máy tính (Web Desktop), hiển thị khung điện thoại di động
-            if (constraints.maxWidth > 500) {
+            if (kIsWeb && constraints.maxWidth > 500) {
               return Container(
                 color: const Color(0xFF181A20), // Nền tối trang nhã cho Web demo
                 child: Center(
