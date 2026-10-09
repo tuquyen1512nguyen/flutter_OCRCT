@@ -105,31 +105,38 @@ class ScannerScreen extends ConsumerWidget {
                   spacing: 8,
                   children: [
                     ActionChip(
-                      label: const Text('Mẫu 1 (150.000)'),
+                      label: const Text('Mẫu 1 (150.000 VNĐ)'),
                       onPressed: () => _handleTestSample(
                         context,
-                        'ABC MART\nMilk\nBread\nTOTAL: 150.000',
+                        'ABC MART\nSữa tươi\nBánh mì\nTổng tiền thanh toán: 150.000 VNĐ',
                       ),
                     ),
                     ActionChip(
                       label: const Text('Mẫu 2 (85,000 đ)'),
                       onPressed: () => _handleTestSample(
                         context,
-                        'Cửa hàng XYZ\nNước uống\nTổng tiền: 85,000 đ',
+                        'Cửa hàng XYZ\nNước uống\nTổng tiền: 85,000 đ\nTiền khách đưa: 100,000 đ\nTiền thừa: 15,000 đ',
                       ),
                     ),
                     ActionChip(
                       label: const Text('Mẫu 3 (1.250.000)'),
                       onPressed: () => _handleTestSample(
                         context,
-                        'ABC SHOP\nThanh toán: 1.250.000',
+                        'Shop Thời Trang Uniqlo\nÁo sơ mi\nThanh toán: 1.250.000',
                       ),
                     ),
                     ActionChip(
-                      label: const Text('Mẫu 4 (Không tổng)'),
+                      label: const Text('Mẫu 4 (Phúc Long 65.000đ)'),
                       onPressed: () => _handleTestSample(
                         context,
-                        'ABC SHOP\nItems list...\nNo total line',
+                        'Trà Sữa Phúc Long\nTrà đào cam sả\nKhách phải trả: 65.000đ',
+                      ),
+                    ),
+                    ActionChip(
+                      label: const Text('Mẫu 5 (Không tổng)'),
+                      onPressed: () => _handleTestSample(
+                        context,
+                        'Cửa Hàng Tạp Hóa\nDanh sách đồ...\nChưa có dòng tổng',
                       ),
                     ),
                   ],

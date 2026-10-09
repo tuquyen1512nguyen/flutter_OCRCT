@@ -59,7 +59,7 @@ void main() {
 
   group('ParsedReceipt Model Tests', () {
     test('creates ParsedReceipt instance correctly', () {
-      final receipt = ParsedReceipt(
+      const receipt = ParsedReceipt(
         merchantName: 'WinMart',
         totalAmount: 120000,
         category: 'Mua sắm',
