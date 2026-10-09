@@ -1,9 +1,13 @@
-name: Deploy Flutter Web to GitHub Pages / Cloudflare
+name: Deploy Flutter Web to GitHub Pages
 
 on:
   push:
     branches:
       - main
+  workflow_dispatch:
+
+permissions:
+  contents: write
 
 jobs:
   build-and-deploy:
